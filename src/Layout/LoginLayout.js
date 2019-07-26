@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { SetUserLoginIn } from "../Myredux/reducer";
-import { Container, Grid, Button, Form,Icon } from "semantic-ui-react";
-import store from "../Myredux";
-import { Link } from "react-router-dom";
+import { Container, Grid, Button, Form, Icon } from "semantic-ui-react";
 
 class LoginLayout extends Component {
   constructor(props) {
