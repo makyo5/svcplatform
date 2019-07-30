@@ -26,4 +26,29 @@ const routes = [
   }
 ]
 
-export default routes;
+const SubRoutes = [
+  {
+    path: "/dashboard",
+    exact:true,
+    title: "总体",
+    sidebar: () => <div>dash</div>,
+    main:()=> <div>dashboard data</div>
+  },  {
+    path: "/clinic",
+    title:"门诊数据",
+    sidebar: () => <div>clinic</div>,
+    main:()=> <div>this is clinic content</div>
+  }, {
+    path: "/inp",
+    title: "住院数据",
+    sidebar: () => <div>inpdata</div>,
+    main:()=><div>inp data</div>
+  },  {
+    path: "/zkb",
+    title:"质控办",
+    sidebar: () => <div>zkb</div>,
+    main:()=> <div>this is zkb content</div>
+  }
+]
+
+export { routes, SubRoutes };

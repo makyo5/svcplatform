@@ -8,7 +8,8 @@ const initState = {
     empno: "",
     password:"",
     empname: "",
-    isLogin: false,
+    // isLogin: false,
+    isLogin:true, //for test
     todos: [
         {
             id: 1,

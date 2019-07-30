@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { SetUserLoginIn } from "../Myredux/reducer";
 import { Container, Grid, Button, Form, Icon } from "semantic-ui-react";
+import { Redirect } from "react-router-dom";
 
 class LoginLayout extends Component {
   constructor(props) {
@@ -24,10 +25,15 @@ class LoginLayout extends Component {
     if (this.state.empno === "1" && this.state.password === "1") {
       this.props.handleLoginBtnClick();
     }
-    console.log();
   }
 
   render() {
+    console.log(this.props.isLogin);
+    if (this.props.isLogin===true) {
+      return (
+        <Redirect to="/home" />
+      )
+    }
     return (
       <Container>
         <Grid columns={3}>
@@ -85,5 +91,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-  
 )(LoginLayout);
