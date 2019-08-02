@@ -7,8 +7,7 @@ import { SubRoutes } from "../routes";
 
 
 const NavListComponent = () => (
-    <Item.Group>
-        
+    <Item.Group>        
     {SubRoutes.map((route, index) => (
         <Item key={index}>
             <Link 

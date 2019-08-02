@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container, Grid } from "semantic-ui-react";
-import { BrowserRouter, Route,Link } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { NavListComponent } from "../Component/NavListComponent";
 import { SubRoutes } from "../routes";

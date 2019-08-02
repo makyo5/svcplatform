@@ -1,6 +1,8 @@
 import React from "react";
 import LoginLayout from "./Layout/LoginLayout";
 
+import * as ZkbComponent from "./Component/ZkbComponent";
+
 const routes = [
   {
     path: "/",
@@ -47,8 +49,9 @@ const SubRoutes = [
     path: "/zkb",
     title:"质控办",
     sidebar: () => <div>zkb</div>,
-    main:()=> <div>this is zkb content</div>
+    main: () => <ZkbComponent.ZkbMainLayout />    
   }
 ]
+
 
 export { routes, SubRoutes };
