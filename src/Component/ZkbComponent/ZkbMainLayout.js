@@ -8,19 +8,18 @@ import { SubRoutes } from "../../routes";
 const ZkbNav = () => (
     <Segment.Group horizontal>
         <Segment>
-            主页
+            <Link to="/zkb">
+                质控办-主页
+            </Link>
         </Segment>
         <Segment>
-            不良事件
+            <Link to="/zkb/blsj">
+                不良事件
+            </Link>
         </Segment>
     </Segment.Group>
 )
 
-const ZkbScreen = () => (
-    <div>
-        
-    </div>
-)
 
 class ZkbMainLayout extends Component {
 
@@ -33,7 +32,7 @@ class ZkbMainLayout extends Component {
                     </Grid.Row>
                 </Grid>
                 <Grid>
-                    <ZkbScreen />
+                <Route />
                 </Grid>
             </Container>
         )

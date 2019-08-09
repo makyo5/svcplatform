@@ -7,17 +7,33 @@ import { SubRoutes } from "../routes";
 
 
 const NavListComponent = () => (
-    <Item.Group>        
-    {SubRoutes.map((route, index) => (
-        <Item key={index}>
-            <Link 
-                key={index}
-                to={route.path}
-            >
-                <Button content={route.title}/>
+    <Item.Group> 
+        <Item>
+            <Link to="/dashboard">
+                <Button content="仪表" />
             </Link>
         </Item>
-    ))}
+        <Item>
+            <Link to="/clinic">
+            <Button content="门诊" />
+            </Link>
+        </Item>
+        <Item>
+            <Link to="/inp">
+            <Button content="住院" />
+            </Link>
+        </Item>
+        <Item>
+            <Link to="/zkb">
+            <Button content="质控" />
+            </Link>
+        </Item>
+        <Item>
+            <Link to="/xxk">
+                <Button content="信息科" />
+            </Link>
+        </Item>
+        
     </Item.Group>
 )
 

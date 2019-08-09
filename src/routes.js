@@ -2,6 +2,7 @@ import React from "react";
 import LoginLayout from "./Layout/LoginLayout";
 
 import * as ZkbComponent from "./Component/ZkbComponent";
+import XxkMainLayout from "./Layout/XxkMainLayout";
 
 const routes = [
   {
@@ -13,10 +14,6 @@ const routes = [
     path: "/login",
     sidebar: () => <div>Login</div>,
     main: () => <LoginLayout />
-  }, {
-    path: "/xxk",
-    sidebar: () => <div>the sidebar</div>,
-    main: () => <div>xxk</div>
   }, {
     path: "/About",
     sidebar: () => <div>about</div>,
@@ -45,11 +42,20 @@ const SubRoutes = [
     title: "住院数据",
     sidebar: () => <div>inpdata</div>,
     main:()=><div>inp data</div>
-  },  {
+  }, {
     path: "/zkb",
     title:"质控办",
     sidebar: () => <div>zkb</div>,
     main: () => <ZkbComponent.ZkbMainLayout />    
+  }, {
+    path: "/zkb/blsj",
+    title: "不良事件",
+    sidebar: () => <div>blsj不良事件</div>,
+    main:()=><div><ZkbComponent.ZkbBlsjComponent /></div>
+  }, {
+    path: "/xxk",
+    sidebar: () => <div>信息科</div>,
+    main: () => <div><XxkMainLayout/></div>
   }
 ]
 
